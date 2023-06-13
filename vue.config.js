@@ -34,35 +34,7 @@ module.exports = {
         ws: true,
         changeOrigin: true
       },
-      '/napi': {
-        target: process.env.VUE_APP_API,
-        changeOrigin: true, // 是否允许跨域
-        secure: false
-        // pathRewrite: {
-        //   '^/napi': '/'
-        // }
-        // ws: true, // 是否启用websockets
-      },
-      '/tables_preview': {
-        target: process.env.VUE_APP_API,
-        changeOrigin: true, // 是否允许跨域
-        secure: false
-      },
-      // 监控部分代理
-      '/monitor': {
-        target: 'http://192.168.3.186:30076/d',
-        changeOrigin: true, // 是否允许跨域
-        secure: false
-        // pathRewrite: {
-        //   '^/api': '/'
-        // }
-        // ws: true, // 是否启用websockets
-      },
-      '/upload_compressed_files': {
-        target: process.env.VUE_APP_API,
-        changeOrigin: true, // 是否允许跨域
-        secure: false
-      }
+     
     }
   },
   // configureWebpack: {
